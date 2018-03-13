@@ -10,17 +10,17 @@ import io.realm.annotations.PrimaryKey;
  * Created by fazenda on 13/03/18.
  */
 
-public class Pecas extends RealmObject implements Serializable{
+public class Peca extends RealmObject implements Serializable{
 
     @PrimaryKey
     private int id;
     private String nome;
-    private String descreicao;
+    private String descricao;
 
-    public Pecas(int id, String nome, String descreicao) {
+    public Peca(int id, String nome, String descricao) {
         this.id = id;
         this.nome = nome;
-        this.descreicao = descreicao;
+        this.descricao = descricao;
     }
 
     public int getId() {
@@ -39,11 +39,11 @@ public class Pecas extends RealmObject implements Serializable{
         this.nome = nome;
     }
 
-    public String getDescreicao() {
-        return descreicao;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setDescreicao(String descreicao) {
-        this.descreicao = descreicao;
+    public void setDescricao(String descreicao) {
+        this.descricao = descreicao;
     }
 }
