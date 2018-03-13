@@ -25,7 +25,7 @@ public class Proprietario extends RealmObject implements Serializable {
     }
 
     public Proprietario() {
-        
+
     }
 
     public int getId() {
