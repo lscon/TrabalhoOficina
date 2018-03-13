@@ -1,7 +1,9 @@
-package br.edu.iff.pooa20172.trabalhooficina;
+package br.edu.iff.pooa20172.trabalhooficina.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import br.edu.iff.pooa20172.trabalhooficina.R;
 
 public class ActivityPrincipal extends AppCompatActivity {
 

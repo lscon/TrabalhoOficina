@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
+import br.edu.iff.pooa20172.trabalhooficina.R;
 import br.edu.iff.pooa20172.trabalhooficina.model.Peca;
 
 /**
