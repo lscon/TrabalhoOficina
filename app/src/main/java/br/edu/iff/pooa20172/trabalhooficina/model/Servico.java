@@ -24,6 +24,10 @@ public class Servico extends RealmObject implements Serializable {
         this.mecanico = mecanico;
     }
 
+    public Servico() {
+
+    }
+
     public int getId() {
         return id;
     }

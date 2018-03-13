@@ -24,6 +24,10 @@ public class Proprietario extends RealmObject implements Serializable {
         this.telefone = telefone;
     }
 
+    public Proprietario() {
+        
+    }
+
     public int getId() {
         return id;
     }

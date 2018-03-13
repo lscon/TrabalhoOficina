@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.PecaActivity"></activity>
+        <activity android:name=".activity.PecaActivity" />
+        <activity android:name=".activity.PecaDetalheActivity"></activity>
     </application>
 
 </manifest>

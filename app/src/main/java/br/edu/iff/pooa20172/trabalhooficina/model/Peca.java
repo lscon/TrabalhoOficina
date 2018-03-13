@@ -23,6 +23,10 @@ public class Peca extends RealmObject implements Serializable{
         this.descricao = descricao;
     }
 
+    public Peca() {
+
+    }
+
     public int getId() {
         return id;
     }
