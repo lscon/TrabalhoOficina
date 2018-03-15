@@ -9,26 +9,26 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import br.edu.iff.pooa20172.trabalhooficina.R;
-import br.edu.iff.pooa20172.trabalhooficina.model.Servico;
+import br.edu.iff.pooa20172.trabalhooficina.model.Proprietario;
 import io.realm.Realm;
 
-public class ServicoDetalheActivity extends AppCompatActivity {
+public class ProprietarioDetalheActivity extends AppCompatActivity {
 
-    EditText nome, horas, mecanico;
+    EditText nome, endereco, telefone;
     Button btsalvar,btalterar, btdeletar;
 
     int id;
-    Servico servico;
+    Proprietario proprietario;
     private Realm realm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_servico_detalhe);
+        setContentView(R.layout.activity_proprietario_detalhe);
 
-        nome = (EditText) findViewById(R.id.ed_nome_servico);
-        horas = (EditText) findViewById(R.id.ed_horas);
-        mecanico = (EditText) findViewById(R.id.ed_mecanico);
+        nome = (EditText) findViewById(R.id.ed_nome_proprietario);
+        endereco = (EditText) findViewById(R.id.ed_endereco);
+        telefone = (EditText) findViewById(R.id.ed_telefone);
 
         btsalvar = (Button) findViewById(R.id.bt_salvar_servico);
         btalterar = (Button) findViewById(R.id.bt_alterar_servico);
@@ -43,11 +43,11 @@ public class ServicoDetalheActivity extends AppCompatActivity {
             btsalvar.setClickable(false);
             btsalvar.setVisibility(View.INVISIBLE);
 
-            servico = realm.where(Servico.class).equalTo("id",id).findFirst();
+            proprietario = realm.where(Proprietario.class).equalTo("id",id).findFirst();
 
-            nome.setText(servico.getNome());
-            horas.setText(Integer.toString((int) servico.getHoras()));
-            mecanico.setText(servico.getMecanico());
+            nome.setText(proprietario.getNome());
+            endereco.setText(proprietario.getEndereco());
+            telefone.setText(proprietario.getTelefone());
 
         }else{
             btalterar.setEnabled(false);
@@ -87,11 +87,11 @@ public class ServicoDetalheActivity extends AppCompatActivity {
 
     public void deletar(){
         realm.beginTransaction();
-        servico.deleteFromRealm();
+        proprietario.deleteFromRealm();
         realm.commitTransaction();
         realm.close();
 
-        Toast.makeText(this,"Serviço deletado",Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"Proprietário deletado",Toast.LENGTH_LONG).show();
         this.finish();
 
     }
@@ -100,21 +100,21 @@ public class ServicoDetalheActivity extends AppCompatActivity {
 
 
         int proximoID = 1;
-        if(realm.where(Servico.class).max("id") !=null)
-            proximoID = realm.where(Servico.class).max("id").intValue()+1;
+        if(realm.where(Proprietario.class).max("id") !=null)
+            proximoID = realm.where(Proprietario.class).max("id").intValue()+1;
 
         realm.beginTransaction();
-        Servico servico = new Servico();
-        servico.setId(proximoID);
-        servico.setNome(nome.getText().toString());
-        servico.setHoras(Integer.parseInt(horas.getText().toString()));
-        servico.setMecanico(mecanico.getText().toString());
+        Proprietario proprietario = new Proprietario();
+        proprietario.setId(proximoID);
+        proprietario.setNome(nome.getText().toString());
+        proprietario.setEndereco(endereco.getText().toString());
+        proprietario.setTelefone(telefone.getText().toString());
 
-        realm.copyToRealm(servico);
+        realm.copyToRealm(proprietario);
         realm.commitTransaction();
         realm.close();
 
-        Toast.makeText(this,"Serviço Cadastrado",Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"Proprietário Cadastrado",Toast.LENGTH_LONG).show();
         this.finish();
 
     }
@@ -122,15 +122,15 @@ public class ServicoDetalheActivity extends AppCompatActivity {
 
         realm.beginTransaction();
 
-        servico.setNome(nome.getText().toString());
-        servico.setHoras(Integer.parseInt(horas.getText().toString()));
-        servico.setMecanico(mecanico.getText().toString());
+        proprietario.setNome(nome.getText().toString());
+        proprietario.setEndereco(endereco.getText().toString());
+        proprietario.setTelefone(telefone.getText().toString());
 
-        realm.copyToRealm(servico);
+        realm.copyToRealm(proprietario);
         realm.commitTransaction();
         realm.close();
 
-        Toast.makeText(this,"Serviço Alterado", Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"Proprietário Alterado", Toast.LENGTH_LONG).show();
         this.finish();
 
     }
