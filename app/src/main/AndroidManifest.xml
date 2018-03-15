@@ -21,8 +21,10 @@
             android:name=".activity.PecaActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activity.PecaDetalheActivity" />
-        <activity android:name=".activity.ServicoActivity"
-                  android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.ServicoActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.ServicoDetalheActivity"></activity>
     </application>
 
 </manifest>
