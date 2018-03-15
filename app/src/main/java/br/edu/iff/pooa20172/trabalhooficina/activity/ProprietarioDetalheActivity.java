@@ -29,10 +29,10 @@ public class ProprietarioDetalheActivity extends AppCompatActivity {
         nome = (EditText) findViewById(R.id.ed_nome_proprietario);
         endereco = (EditText) findViewById(R.id.ed_endereco);
         telefone = (EditText) findViewById(R.id.ed_telefone);
-
-        btsalvar = (Button) findViewById(R.id.bt_salvar_servico);
-        btalterar = (Button) findViewById(R.id.bt_alterar_servico);
-        btdeletar = (Button) findViewById(R.id.bt_deletar_servico);
+git log
+        btsalvar = (Button) findViewById(R.id.bt_salvar_proprietario);
+        btalterar = (Button) findViewById(R.id.bt_alterar_proprietario);
+        btdeletar = (Button) findViewById(R.id.bt_deletar_proprietario);
 
         Intent intent    = getIntent();
         id = (int) intent.getSerializableExtra("id");

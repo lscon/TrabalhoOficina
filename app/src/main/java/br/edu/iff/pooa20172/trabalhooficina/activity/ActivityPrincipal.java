@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import br.edu.iff.pooa20172.trabalhooficina.R;
+import br.edu.iff.pooa20172.trabalhooficina.model.Proprietario;
 
 import static java.security.AccessController.getContext;
 
@@ -35,6 +36,17 @@ public class ActivityPrincipal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), ServicoActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        Button proprietarioBT = (Button) findViewById(R.id.bt_proprietarios);
+
+        proprietarioBT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), ProprietarioActivity.class);
                 startActivity(intent);
 
             }
