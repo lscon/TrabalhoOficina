@@ -17,9 +17,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.PecaActivity"
-                  android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".activity.PecaDetalheActivity"></activity>
+        <activity
+            android:name=".activity.PecaActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.PecaDetalheActivity" />
+        <activity android:name=".activity.ServicoActivity"
+                  android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
