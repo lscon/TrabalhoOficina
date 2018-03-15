@@ -36,14 +36,14 @@ public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent,
         View view = LayoutInflater.from(context)
         .inflate(R.layout.item_proprietario, parent, false);
         ProprietarioAdapter.ProprietarioViewHolder proprietarioViewHolder = new ProprietarioAdapter.ProprietarioViewHolder(view);
-        return prorprietarioViewHolder;
+        return proprietarioViewHolder;
         }
 
 @Override
 public void onBindViewHolder(RecyclerView.ViewHolder viewHolder,
         int position) {
 
-        ProprietarioAdapter.ServicoViewHolder holder = (ProprietarioAdapter.ProprietarioViewHolder) viewHolder;
+        ProprietarioAdapter.ProprietarioViewHolder holder = (ProprietarioAdapter.ProprietarioViewHolder) viewHolder;
 
         Proprietario proprietario = prorprietarios.get(position) ;
 
