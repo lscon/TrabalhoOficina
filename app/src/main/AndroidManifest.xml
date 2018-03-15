@@ -24,7 +24,8 @@
         <activity
             android:name=".activity.ServicoActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activity.ServicoDetalheActivity"></activity>
+        <activity android:name=".activity.ServicoDetalheActivity" />
+        <activity android:name=".activity.ProprietarioActivity"></activity>
     </application>
 
 </manifest>
