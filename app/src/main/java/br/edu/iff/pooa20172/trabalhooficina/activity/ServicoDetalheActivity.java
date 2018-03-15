@@ -46,7 +46,7 @@ public class ServicoDetalheActivity extends AppCompatActivity {
             servico = realm.where(Servico.class).equalTo("id",id).findFirst();
 
             nome.setText(servico.getNome());
-            horas.setText((int) servico.getHoras());
+            horas.setText(Integer.toString((int) servico.getHoras()));
             mecanico.setText(servico.getMecanico());
 
         }else{
@@ -107,7 +107,7 @@ public class ServicoDetalheActivity extends AppCompatActivity {
         Servico servico = new Servico();
         servico.setId(proximoID);
         servico.setNome(nome.getText().toString());
-        servico.setHoras(Float.parseFloat(horas.getText().toString()));
+        servico.setHoras(Integer.parseInt(horas.getText().toString()));
         servico.setMecanico(mecanico.getText().toString());
 
         realm.copyToRealm(servico);
@@ -123,7 +123,7 @@ public class ServicoDetalheActivity extends AppCompatActivity {
         realm.beginTransaction();
 
         servico.setNome(nome.getText().toString());
-        servico.setHoras(Float.parseFloat(horas.getText().toString()));
+        servico.setHoras(Integer.parseInt(horas.getText().toString()));
 
         realm.copyToRealm(servico);
         realm.commitTransaction();

@@ -28,6 +28,17 @@ public class ActivityPrincipal extends AppCompatActivity {
 
             }
         });
+
+        Button servicoBT = (Button) findViewById(R.id.bt_servicos);
+
+        servicoBT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), ServicoActivity.class);
+                startActivity(intent);
+
+            }
+        });
     }
 
     private Context getContext(){

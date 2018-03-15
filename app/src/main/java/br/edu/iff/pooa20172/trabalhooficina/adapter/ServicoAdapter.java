@@ -35,19 +35,19 @@ public class ServicoAdapter extends RecyclerView.Adapter {
         View view = LayoutInflater.from(context)
                 .inflate(R.layout.item_servico, parent, false);
         ServicoAdapter.ServicoViewHolder servicoViewHolder = new ServicoAdapter.ServicoViewHolder(view);
-        return ServicoViewHolder;
+        return servicoViewHolder;
     }
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder viewHolder,
                                  int position) {
 
-        PecaAdapter.PecaViewHolder holder = (PecaAdapter.PecaViewHolder) viewHolder;
+        ServicoAdapter.ServicoViewHolder holder = (ServicoAdapter.ServicoViewHolder) viewHolder;
 
         Servico servico  = servicos.get(position) ;
 
         holder.nomeServico.setText(servico.getNome());
-        holder.horas.setText(servico.getHoras());
+        holder.horas.setText(Integer.toString((int) servico.getHoras()));
         holder.mecanico.setText(servico.getMecanico());
 
 

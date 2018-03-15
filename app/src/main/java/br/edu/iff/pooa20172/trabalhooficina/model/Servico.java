@@ -14,10 +14,10 @@ public class Servico extends RealmObject implements Serializable {
     @PrimaryKey
     private int id;
     private String nome;
-    private float horas;
+    private int horas;
     private String mecanico;
 
-    public Servico(int id, String nome, float horas, String mecanico) {
+    public Servico(int id, String nome, int horas, String mecanico) {
         this.id = id;
         this.nome = nome;
         this.horas = horas;
@@ -48,7 +48,7 @@ public class Servico extends RealmObject implements Serializable {
         return horas;
     }
 
-    public void setHoras(float horas) {
+    public void setHoras(int horas) {
         this.horas = horas;
     }
 
