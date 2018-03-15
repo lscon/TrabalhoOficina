@@ -10,17 +10,16 @@
         android:id="@+id/ed_nome_peca"
         android:layout_width="312dp"
         android:layout_height="48dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="16dp"
         android:ems="10"
+        android:hint="Nome"
         android:inputType="textPersonName"
-        android:text="Nome"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="8dp"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintLeft_toLeftOf="parent"
-        tools:layout_editor_absoluteY="11dp"
-        app:layout_constraintHorizontal_bias="0.503" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/ed_descricao_peca"
@@ -28,44 +27,52 @@
         android:layout_height="66dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginTop="15dp"
         android:ems="10"
+        android:hint="Descrição"
         android:inputType="textPersonName"
-        android:text="Descrição"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="89dp" />
+        app:layout_constraintTop_toBottomOf="@+id/ed_nome_peca" />
 
-    <Button
-        android:id="@+id/bt_salvar_peca"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="256dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="8dp"
-        android:text="Salvar"
+        android:layout_height="57dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.319"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/bt_alterar_peca" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.433">
 
-    <Button
-        android:id="@+id/bt_alterar_peca"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="256dp"
-        android:layout_marginRight="40dp"
-        android:text="Alterar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/bt_deletar_peca" />
+        <Button
+            android:id="@+id/bt_salvar_peca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:layout_weight="1"
+            android:text="Salvar" />
 
-    <Button
-        android:id="@+id/bt_deletar_peca"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="256dp"
-        android:layout_marginRight="36dp"
-        android:text="Deletar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        <Button
+            android:id="@+id/bt_alterar_peca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:text="Alterar" />
+
+        <Button
+            android:id="@+id/bt_deletar_peca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Deletar" />
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

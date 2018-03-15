@@ -26,6 +26,7 @@ public class PecaActivity extends AppCompatActivity implements ClickRecyclerView
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_peca);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
         setSupportActionBar(toolbar);
 
         realm = Realm.getDefaultInstance();

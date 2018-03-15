@@ -82,12 +82,8 @@ public class PecaAdapter extends RecyclerView.Adapter {
                 @Override
                 public void onClick(View v) {
                     clickRecyclerViewListener.onClick(pecas.get(getLayoutPosition()));
-
                 }
             });
-
-
         }
     }
-
 }
